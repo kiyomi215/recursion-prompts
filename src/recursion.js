@@ -49,7 +49,15 @@ var arraySum = function(arr) {
 
 // 4. Check whether a number is even or not.
 var isEven = function(n) {
-
+  if (n < 0) {
+    return isEven(n*-1);
+  } else if (n === 0) {
+    return true;
+  } else if (n ===1) {
+    return false;
+  } else {
+    return isEven(n-2);
+  }
 };
 
 
